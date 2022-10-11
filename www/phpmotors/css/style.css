@@ -176,6 +176,10 @@ img.main-image {
   height: 100px;
 }
 
+.error p {
+  padding: 20px 5px;
+}
+
 
 @media screen and (min-width: 600px) {
   .container {
@@ -223,4 +227,15 @@ img.main-image {
     grid-row: 3 / 4;
   }
 
+  .error {
+    grid-column: 1 / 3;
+  }
+
+  .error h1 {
+    font-size: 2.5rem;
+  }
+
+  .error p {
+    font-size: 1.2rem;
+  }
 }
