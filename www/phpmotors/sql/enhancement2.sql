@@ -11,7 +11,7 @@
       VALUES ("Tony", "Stark", "tony@starkent.com", "Iam1ronM@n", "I am the real Ironman");
 
 ## 2. Modify the Tony Stark record to change the clientLevel to 3. The previous insert query will have to have been stored in the database for the update query to work.
-      UPDATE clients SET clientLevel = 3 WHERE clientId = 1;
+      UPDATE clients SET clientLevel = 3 WHERE clientId = 7;
 
 ## 3. Modify the "GM Hummer" record to read "spacious interior" rather than "small interior" using a single query. Explore the SQL Replace function. It needs to be part of an Update query as shown in the code examples of the SQL Reading - Read Ch. 1, section 3.
       UPDATE inventory SET invDescription = replace(invDescription, 'small', 'spacious')
