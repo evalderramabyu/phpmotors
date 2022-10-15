@@ -15,7 +15,6 @@
       </header>
 
       <nav class="navbar">
-        <!-- <?php //require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/common/navigation.php'; ?> -->
         <?php echo $navList; ?>
       </nav>
       <main>

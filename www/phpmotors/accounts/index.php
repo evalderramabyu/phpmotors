@@ -16,9 +16,14 @@
   //echo "</pre>";
   //exit;
 
+  $action = filter_input(INPUT_POST, 'action');
+  if ($action == NULL) {
+    $action = filter_input(INPUT_GET, 'action');
+  }
+
   // Build a navigation bar using the $classifications array
   $navList = '<ul>';
-  $navList .= "<li><a href='/phpmotors/index.php' class='nav-link active' title='View the PHP Motors home page'>Home</a></li>";
+  $navList .= "<li><a href='/phpmotors' class='nav-link ".(($action == NULL) ? 'active' : '')."' title='View the PHP Motors home page'>Home</a></li>";
   foreach ($classifications as $classification) {
     $navList .= "<li><a href='/phpmotors/index.php?action=".urlencode($classification['classificationName'])."' class='nav-link' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
   }
@@ -28,14 +33,12 @@
   //echo $navList;
   //exit;
 
-
-  $action = filter_input(INPUT_POST, 'action');
-  if ($action == NULL) {
-    $action = filter_input(INPUT_GET, 'action');
-  }
-
   switch ($action) {
-    case '':
+    case 'login':
+      include '../view/login.php';
+      break;
+    case 'registration':
+      include '../view/registration.php';
       break;
     default:
       break;
