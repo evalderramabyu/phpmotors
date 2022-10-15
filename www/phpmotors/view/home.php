@@ -15,7 +15,8 @@
       </header>
 
       <nav class="navbar">
-        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/common/navigation.php'; ?>
+        <!-- <?php //require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/common/navigation.php'; ?> -->
+        <?php echo $navList; ?>
       </nav>
       <main>
         <h1>Welcome to PHP Motors!</h1>
